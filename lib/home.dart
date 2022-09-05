@@ -27,19 +27,19 @@ class _HomePageState extends State<HomePage> {
         type: BottomNavigationBarType.fixed,
         items: const [
           BottomNavigationBarItem(
-            icon: Icon(Icons.search),
+            icon: Icon(Icons.search, size: 27),
             label: '검색',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.favorite_border),
+            icon: Icon(Icons.favorite_border, size: 27),
             label: '위시리스트',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.business_center_outlined),
+            icon: Icon(Icons.business_center_outlined, size: 27),
             label: '내 예약',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.account_circle_outlined),
+            icon: Icon(Icons.account_circle_outlined, size: 27),
             label: '프로필',
           ),
         ],
