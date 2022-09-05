@@ -12,6 +12,12 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        bottom: PreferredSize(
+            preferredSize: const Size.fromHeight(50.0),
+            child: Container(
+              color: const Color(0xFF12347B),
+              height: 50.0,
+            )),
         backgroundColor: const Color(0xFF12347B),
         title: Image.asset('image/booking_logo.png', width: 130),
         actions: [
