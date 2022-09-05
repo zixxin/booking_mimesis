@@ -20,64 +20,89 @@ class _HomePageState extends State<HomePage> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Row(
-                      children: [
-                        IconButton(
-                          iconSize: 20,
-                          icon: const Icon(Icons.bed_outlined,
-                              color: Colors.white),
-                          onPressed: () {},
+                    Container(
+                      decoration: BoxDecoration(
+                        color: const Color(0xFF264888),
+                        borderRadius: BorderRadius.circular(100),
+                        border: Border.all(
+                          color: Colors.white,
+                          width: 1,
                         ),
-                        const Text(
-                          '숙소',
-                          style: TextStyle(color: Colors.white, fontSize: 13),
-                        ),
-                      ],
+                      ),
+                      margin: const EdgeInsets.only(left: 15, bottom: 10),
+                      child: Row(
+                        children: [
+                          IconButton(
+                            iconSize: 20,
+                            icon: const Icon(Icons.bed_outlined,
+                                color: Colors.white),
+                            onPressed: () {},
+                          ),
+                          Container(
+                            margin: const EdgeInsets.only(right: 15),
+                            child: const Text(
+                              '숙소',
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 13),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
-                    Row(
-                      children: [
-                        IconButton(
-                          iconSize: 20,
-                          icon: const Icon(Icons.directions_car,
-                              color: Colors.white),
-                          onPressed: () {},
-                        ),
-                        const Text(
-                          '렌터카',
-                          style: TextStyle(color: Colors.white, fontSize: 13),
-                        ),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        IconButton(
-                          iconSize: 20,
-                          icon: const Icon(Icons.local_taxi_outlined,
-                              color: Colors.white),
-                          onPressed: () {},
-                        ),
-                        const Text(
-                          '택시',
-                          style: TextStyle(color: Colors.white, fontSize: 13),
-                        ),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        IconButton(
-                          iconSize: 20,
-                          icon: const Icon(Icons.attractions_outlined,
-                              color: Colors.white),
-                          onPressed: () {},
-                        ),
-                        Container(
-                          margin: const EdgeInsets.only(right: 15),
-                          child: const Text(
-                            '명소/투어',
+                    Container(
+                      margin: const EdgeInsets.only(bottom: 10),
+                      child: Row(
+                        children: [
+                          IconButton(
+                            iconSize: 20,
+                            icon: const Icon(Icons.directions_car,
+                                color: Colors.white),
+                            onPressed: () {},
+                          ),
+                          const Text(
+                            '렌터카',
                             style: TextStyle(color: Colors.white, fontSize: 13),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
+                    ),
+                    Container(
+                      margin: const EdgeInsets.only(bottom: 10),
+                      child: Row(
+                        children: [
+                          IconButton(
+                            iconSize: 20,
+                            icon: const Icon(Icons.local_taxi_outlined,
+                                color: Colors.white),
+                            onPressed: () {},
+                          ),
+                          const Text(
+                            '택시',
+                            style: TextStyle(color: Colors.white, fontSize: 13),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      margin: const EdgeInsets.only(bottom: 10),
+                      child: Row(
+                        children: [
+                          IconButton(
+                            iconSize: 20,
+                            icon: const Icon(Icons.attractions_outlined,
+                                color: Colors.white),
+                            onPressed: () {},
+                          ),
+                          Container(
+                            margin: const EdgeInsets.only(right: 18),
+                            child: const Text(
+                              '명소/투어',
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 13),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ],
                 ))),
