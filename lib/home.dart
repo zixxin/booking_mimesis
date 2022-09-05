@@ -15,9 +15,72 @@ class _HomePageState extends State<HomePage> {
         bottom: PreferredSize(
             preferredSize: const Size.fromHeight(50.0),
             child: Container(
-              color: const Color(0xFF12347B),
-              height: 50.0,
-            )),
+                color: const Color(0xFF12347B),
+                height: 50.0,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Row(
+                      children: [
+                        IconButton(
+                          iconSize: 20,
+                          icon: const Icon(Icons.bed_outlined,
+                              color: Colors.white),
+                          onPressed: () {},
+                        ),
+                        const Text(
+                          '숙소',
+                          style: TextStyle(color: Colors.white, fontSize: 13),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        IconButton(
+                          iconSize: 20,
+                          icon: const Icon(Icons.directions_car,
+                              color: Colors.white),
+                          onPressed: () {},
+                        ),
+                        const Text(
+                          '렌터카',
+                          style: TextStyle(color: Colors.white, fontSize: 13),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        IconButton(
+                          iconSize: 20,
+                          icon: const Icon(Icons.local_taxi_outlined,
+                              color: Colors.white),
+                          onPressed: () {},
+                        ),
+                        const Text(
+                          '택시',
+                          style: TextStyle(color: Colors.white, fontSize: 13),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        IconButton(
+                          iconSize: 20,
+                          icon: const Icon(Icons.attractions_outlined,
+                              color: Colors.white),
+                          onPressed: () {},
+                        ),
+                        Container(
+                          margin: const EdgeInsets.only(right: 15),
+                          child: const Text(
+                            '명소/투어',
+                            style: TextStyle(color: Colors.white, fontSize: 13),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ))),
         backgroundColor: const Color(0xFF12347B),
         title: Image.asset('image/booking_logo.png', width: 130),
         actions: [
