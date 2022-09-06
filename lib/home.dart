@@ -33,6 +33,9 @@ class _HomePageState extends State<HomePage> {
                       child: Row(
                         children: [
                           IconButton(
+                            padding: const EdgeInsets.only(
+                                left: 15, top: 7, bottom: 7, right: 7),
+                            constraints: const BoxConstraints(),
                             iconSize: 20,
                             icon: const Icon(Icons.bed_outlined,
                                 color: Colors.white),
@@ -54,6 +57,8 @@ class _HomePageState extends State<HomePage> {
                       child: Row(
                         children: [
                           IconButton(
+                            padding: const EdgeInsets.only(left: 15, right: 7),
+                            constraints: const BoxConstraints(),
                             iconSize: 20,
                             icon: const Icon(Icons.directions_car,
                                 color: Colors.white),
@@ -71,6 +76,8 @@ class _HomePageState extends State<HomePage> {
                       child: Row(
                         children: [
                           IconButton(
+                            padding: const EdgeInsets.only(left: 15, right: 7),
+                            constraints: const BoxConstraints(),
                             iconSize: 20,
                             icon: const Icon(Icons.local_taxi_outlined,
                                 color: Colors.white),
@@ -88,6 +95,8 @@ class _HomePageState extends State<HomePage> {
                       child: Row(
                         children: [
                           IconButton(
+                            padding: const EdgeInsets.only(left: 15, right: 7),
+                            constraints: const BoxConstraints(),
                             iconSize: 20,
                             icon: const Icon(Icons.attractions_outlined,
                                 color: Colors.white),
@@ -107,11 +116,11 @@ class _HomePageState extends State<HomePage> {
                   ],
                 ))),
         backgroundColor: const Color(0xFF12347B),
-        title: Image.asset('image/booking_logo.png', width: 130),
+        title: Image.asset('image/booking_logo.png', width: 120),
         actions: [
           IconButton(
-            padding: const EdgeInsets.only(right: 15, bottom: 5),
-            iconSize: 30,
+            padding: const EdgeInsets.only(right: 20, bottom: 5),
+            iconSize: 27,
             icon: const Icon(Icons.notifications_outlined),
             onPressed: () {},
           ),
