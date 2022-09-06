@@ -151,217 +151,259 @@ class _HomePageState extends State<HomePage> {
         unselectedItemColor: const Color(0xFF6B6B6B),
         showUnselectedLabels: true,
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Container(
-                  width: 355,
-                  decoration: BoxDecoration(
-                    color: const Color(0xFFFFFFFF),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.3),
-                        spreadRadius: 5,
-                        blurRadius: 10,
-                        offset: const Offset(0, 3),
-                      ),
-                    ],
-                    borderRadius: BorderRadius.circular(13),
-                    border: Border.all(
-                      color: const Color(0xFFF4BE41),
-                      width: 4,
-                    ),
-                  ),
-                  margin: const EdgeInsets.only(top: 15, left: 15, right: 15),
-                  child: Column(
-                    children: [
-                      Row(
-                        children: [
-                          IconButton(
-                            padding: const EdgeInsets.only(
-                                left: 10, top: 10, bottom: 10, right: 17),
-                            constraints: const BoxConstraints(),
-                            iconSize: 25,
-                            icon: const Icon(Icons.search),
-                            onPressed: () {},
-                          ),
-                          Container(
-                            margin: const EdgeInsets.only(right: 15),
-                            child: const Text(
-                              '목적지 입력',
-                              style: TextStyle(fontSize: 13),
-                            ),
-                          ),
-                        ],
-                      ),
-                      const Divider(
-                        thickness: 1.0,
-                        height: 1.0,
-                      ),
-                      Row(
-                        children: [
-                          IconButton(
-                            padding: const EdgeInsets.only(
-                                left: 10, top: 10, bottom: 10, right: 17),
-                            constraints: const BoxConstraints(),
-                            iconSize: 25,
-                            icon: const Icon(Icons.calendar_today_outlined),
-                            onPressed: () {},
-                          ),
-                          Container(
-                            margin: const EdgeInsets.only(right: 15),
-                            child: const Text(
-                              '9월 5일(월) ~ 9월 6일(화)',
-                              style: TextStyle(fontSize: 13),
-                            ),
-                          ),
-                        ],
-                      ),
-                      const Divider(
-                        thickness: 1.0,
-                        height: 1.0,
-                      ),
-                      Row(
-                        children: [
-                          IconButton(
-                            padding: const EdgeInsets.only(
-                                left: 8, top: 10, bottom: 10, right: 15),
-                            constraints: const BoxConstraints(),
-                            iconSize: 28,
-                            icon: const Icon(Icons.person_outline),
-                            onPressed: () {},
-                          ),
-                          Container(
-                            margin: const EdgeInsets.only(right: 15),
-                            child: const Text(
-                              '객실 1개 - 성인 2명, 동반 아동 없음',
-                              style: TextStyle(fontSize: 13),
-                            ),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          Container(
-                            alignment: Alignment.center,
-                            height: 45,
-                            width: 347,
-                            decoration: const BoxDecoration(
-                              color: Color(0xFF2F6FBC),
-                              borderRadius: BorderRadius.only(
-                                  bottomLeft: Radius.circular(9),
-                                  bottomRight: Radius.circular(9)),
-                            ),
-                            child: const Text(
-                              '검색',
-                              textAlign: TextAlign.center,
-                              style:
-                                  TextStyle(fontSize: 13, color: Colors.white),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-            Container(
-              alignment: Alignment.centerLeft,
-              margin: const EdgeInsets.only(top: 30, left: 15, right: 15),
-              width: 355,
-              height: 50,
-              decoration: BoxDecoration(
-                color: const Color(0xFFFFFFFF),
-                borderRadius: BorderRadius.circular(5),
-                border: Border.all(
-                  color: const Color.fromARGB(255, 205, 205, 205),
-                  width: 1,
-                ),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      body: ListView(
+        children: [
+          Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Row(
-                    children: [
-                      IconButton(
-                        color: const Color(0xFF874317),
-                        padding: const EdgeInsets.only(
-                            left: 13, top: 10, bottom: 10, right: 8),
-                        constraints: const BoxConstraints(),
-                        iconSize: 25,
-                        icon: const Icon(Icons.info_outline),
-                        onPressed: () {},
+                  Container(
+                    width: 355,
+                    decoration: BoxDecoration(
+                      color: const Color(0xFFFFFFFF),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.3),
+                          spreadRadius: 5,
+                          blurRadius: 10,
+                          offset: const Offset(0, 3),
+                        ),
+                      ],
+                      borderRadius: BorderRadius.circular(13),
+                      border: Border.all(
+                        color: const Color(0xFFF4BE41),
+                        width: 4,
                       ),
-                      const Text(
-                        '코로나19(COVID-19) 관련 최신 여행 지침',
-                        style: TextStyle(fontSize: 13, color: Colors.black),
-                      ),
-                    ],
-                  ),
-                  IconButton(
-                    padding: const EdgeInsets.only(
-                        left: 13, top: 10, bottom: 10, right: 13),
-                    constraints: const BoxConstraints(),
-                    iconSize: 15,
-                    icon: const Icon(Icons.arrow_forward_ios),
-                    onPressed: () {},
+                    ),
+                    margin: const EdgeInsets.only(top: 15, left: 15, right: 15),
+                    child: Column(
+                      children: [
+                        Row(
+                          children: [
+                            IconButton(
+                              padding: const EdgeInsets.only(
+                                  left: 10, top: 10, bottom: 10, right: 17),
+                              constraints: const BoxConstraints(),
+                              iconSize: 25,
+                              icon: const Icon(Icons.search),
+                              onPressed: () {},
+                            ),
+                            Container(
+                              margin: const EdgeInsets.only(right: 15),
+                              child: const Text(
+                                '목적지 입력',
+                                style: TextStyle(fontSize: 13),
+                              ),
+                            ),
+                          ],
+                        ),
+                        const Divider(
+                          thickness: 1.0,
+                          height: 1.0,
+                        ),
+                        Row(
+                          children: [
+                            IconButton(
+                              padding: const EdgeInsets.only(
+                                  left: 10, top: 10, bottom: 10, right: 17),
+                              constraints: const BoxConstraints(),
+                              iconSize: 25,
+                              icon: const Icon(Icons.calendar_today_outlined),
+                              onPressed: () {},
+                            ),
+                            Container(
+                              margin: const EdgeInsets.only(right: 15),
+                              child: const Text(
+                                '9월 5일(월) ~ 9월 6일(화)',
+                                style: TextStyle(fontSize: 13),
+                              ),
+                            ),
+                          ],
+                        ),
+                        const Divider(
+                          thickness: 1.0,
+                          height: 1.0,
+                        ),
+                        Row(
+                          children: [
+                            IconButton(
+                              padding: const EdgeInsets.only(
+                                  left: 8, top: 10, bottom: 10, right: 15),
+                              constraints: const BoxConstraints(),
+                              iconSize: 28,
+                              icon: const Icon(Icons.person_outline),
+                              onPressed: () {},
+                            ),
+                            Container(
+                              margin: const EdgeInsets.only(right: 15),
+                              child: const Text(
+                                '객실 1개 - 성인 2명, 동반 아동 없음',
+                                style: TextStyle(fontSize: 13),
+                              ),
+                            ),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Container(
+                              alignment: Alignment.center,
+                              height: 45,
+                              width: 347,
+                              decoration: const BoxDecoration(
+                                color: Color(0xFF2F6FBC),
+                                borderRadius: BorderRadius.only(
+                                    bottomLeft: Radius.circular(9),
+                                    bottomRight: Radius.circular(9)),
+                              ),
+                              child: const Text(
+                                '검색',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    fontSize: 13, color: Colors.white),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),
-            ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const Padding(
-                  padding: EdgeInsets.only(top: 30, left: 15),
-                  child: Text(
-                    '여행이 거듭될수록 커지는 혜택',
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+              Container(
+                alignment: Alignment.centerLeft,
+                margin: const EdgeInsets.only(top: 30, left: 15, right: 15),
+                width: 355,
+                height: 50,
+                decoration: BoxDecoration(
+                  color: const Color(0xFFFFFFFF),
+                  borderRadius: BorderRadius.circular(5),
+                  border: Border.all(
+                    color: const Color.fromARGB(255, 205, 205, 205),
+                    width: 1,
                   ),
                 ),
-                Container(
-                  width: 220,
-                  margin: const EdgeInsets.only(top: 15, left: 15, right: 15),
-                  padding: const EdgeInsets.only(
-                      top: 18, bottom: 15, left: 20, right: 15),
-                  decoration: const BoxDecoration(
-                    color: Color(0xFF1D4AB1),
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.asset(
-                        'image/genius.png',
-                        width: 80,
-                      ),
-                      Container(
-                        margin: const EdgeInsets.only(top: 20),
-                        child: const Text(
-                          '윤지인 님은 Genius 로열티\n프로그램의 레벨 1 회원입니다',
-                          style: TextStyle(color: Colors.white),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Row(
+                      children: [
+                        IconButton(
+                          color: const Color(0xFF874317),
+                          padding: const EdgeInsets.only(
+                              left: 13, top: 10, bottom: 10, right: 8),
+                          constraints: const BoxConstraints(),
+                          iconSize: 25,
+                          icon: const Icon(Icons.info_outline),
+                          onPressed: () {},
                         ),
-                      ),
-                    ],
-                  ),
+                        const Text(
+                          '코로나19(COVID-19) 관련 최신 여행 지침',
+                          style: TextStyle(fontSize: 13, color: Colors.black),
+                        ),
+                      ],
+                    ),
+                    IconButton(
+                      padding: const EdgeInsets.only(
+                          left: 13, top: 10, bottom: 10, right: 13),
+                      constraints: const BoxConstraints(),
+                      iconSize: 15,
+                      icon: const Icon(Icons.arrow_forward_ios),
+                      onPressed: () {},
+                    ),
+                  ],
                 ),
-                const Padding(
-                  padding: EdgeInsets.only(top: 30, left: 15),
-                  child: Text(
-                    '다양한 혜택 및 소식',
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Padding(
+                    padding: EdgeInsets.only(top: 30, left: 15),
+                    child: Text(
+                      '여행이 거듭될수록 커지는 혜택',
+                      style:
+                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                    ),
                   ),
-                ),
-              ],
+                  SizedBox(
+                    height: 130,
+                    child: ListView(
+                      padding: const EdgeInsets.all(0),
+                      scrollDirection: Axis.horizontal,
+                      children: [
+                        Row(
+                          children: [
+                            Container(
+                              width: 220,
+                              margin: const EdgeInsets.only(
+                                  top: 15, left: 15, right: 15),
+                              padding: const EdgeInsets.only(
+                                  top: 18, bottom: 15, left: 20, right: 15),
+                              decoration: const BoxDecoration(
+                                color: Color(0xFF1D4AB1),
+                              ),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Image.asset(
+                                    'image/genius.png',
+                                    width: 80,
+                                  ),
+                                  Container(
+                                    margin: const EdgeInsets.only(top: 20),
+                                    child: const Text(
+                                      '윤지인 님은 Genius 로열티\n프로그램의 레벨 1 회원입니다',
+                                      style: TextStyle(color: Colors.white),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Container(
+                              width: 220,
+                              margin: const EdgeInsets.only(top: 15, right: 15),
+                              padding: const EdgeInsets.only(
+                                  top: 18, bottom: 15, left: 20, right: 15),
+                              decoration: const BoxDecoration(
+                                color: Color(0xFF1D4AB1),
+                              ),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Image.asset(
+                                    'image/genius.png',
+                                    width: 80,
+                                  ),
+                                  Container(
+                                    margin: const EdgeInsets.only(top: 20),
+                                    child: const Text(
+                                      '윤지인 님은 Genius 로열티\n프로그램의 레벨 1 회원입니다',
+                                      style: TextStyle(color: Colors.white),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+          const Padding(
+            padding: EdgeInsets.only(top: 30, left: 15),
+            child: Text(
+              '다양한 혜택 및 소식',
+              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
