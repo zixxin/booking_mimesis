@@ -367,21 +367,30 @@ class _HomePageState extends State<HomePage> {
                               margin: const EdgeInsets.only(top: 15, right: 15),
                               padding: const EdgeInsets.only(
                                   top: 18, bottom: 15, left: 20, right: 15),
-                              decoration: const BoxDecoration(
-                                color: Color(0xFF1D4AB1),
+                              decoration: BoxDecoration(
+                                color: const Color(0xFFFFFFFF),
+                                borderRadius: BorderRadius.circular(3),
+                                border: Border.all(
+                                  color: const Color(0xFF1D4AB1),
+                                  width: 1,
+                                ),
                               ),
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Image.asset(
-                                    'image/genius.png',
-                                    width: 80,
+                                  Container(
+                                    margin: const EdgeInsets.only(top: 5),
+                                    child: const Text(
+                                      '10% 할인',
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold),
+                                    ),
                                   ),
                                   Container(
                                     margin: const EdgeInsets.only(top: 20),
                                     child: const Text(
-                                      '윤지인 님은 Genius 로열티\n프로그램의 레벨 1 회원입니다',
-                                      style: TextStyle(color: Colors.white),
+                                      '전 세계 Genius 숙소에서\n할인 혜택을 누려보세요',
+                                      style: TextStyle(fontSize: 13),
                                     ),
                                   ),
                                 ],
