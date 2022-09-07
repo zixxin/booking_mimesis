@@ -162,7 +162,7 @@ class _HomePageState extends State<HomePage> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Container(
-                    width: 355,
+                    width: 360,
                     decoration: BoxDecoration(
                       color: const Color(0xFFFFFFFF),
                       boxShadow: [
@@ -179,7 +179,7 @@ class _HomePageState extends State<HomePage> {
                         width: 4,
                       ),
                     ),
-                    margin: const EdgeInsets.only(top: 15, left: 15, right: 15),
+                    margin: const EdgeInsets.only(top: 20, left: 15, right: 15),
                     child: Column(
                       children: [
                         Row(
@@ -252,7 +252,7 @@ class _HomePageState extends State<HomePage> {
                             Container(
                               alignment: Alignment.center,
                               height: 45,
-                              width: 347,
+                              width: 352,
                               decoration: const BoxDecoration(
                                 color: Color(0xFF2F6FBC),
                                 borderRadius: BorderRadius.only(
@@ -276,7 +276,7 @@ class _HomePageState extends State<HomePage> {
               Container(
                 alignment: Alignment.centerLeft,
                 margin: const EdgeInsets.only(top: 30, left: 15, right: 15),
-                width: 355,
+                width: 360,
                 height: 50,
                 decoration: BoxDecoration(
                   color: const Color(0xFFFFFFFF),
@@ -411,6 +411,96 @@ class _HomePageState extends State<HomePage> {
               '다양한 혜택 및 소식',
               style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
             ),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Container(
+                width: 170,
+                height: 200,
+                margin: const EdgeInsets.only(
+                    left: 15, top: 15, right: 17, bottom: 20),
+                decoration: BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.3),
+                      spreadRadius: 5,
+                      blurRadius: 10,
+                      offset: const Offset(0, 8),
+                    ),
+                  ],
+                  color: const Color(0xFFFFFFFF),
+                  borderRadius: BorderRadius.circular(3),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    ClipRRect(
+                      borderRadius: const BorderRadius.only(
+                        topLeft: Radius.circular(3),
+                        topRight: Radius.circular(3),
+                      ),
+                      child: Image.asset(
+                        'image/discount.png',
+                        width: 170,
+                        height: 130,
+                        fit: BoxFit.fitWidth,
+                      ),
+                    ),
+                    Container(
+                      margin: const EdgeInsets.only(top: 11, left: 12),
+                      child: const Text(
+                        '최소 15% 할인 혜택',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 12),
+                      ),
+                    ),
+                    Container(
+                      margin: const EdgeInsets.only(top: 5, left: 12),
+                      child: const Text(
+                        '꿈에 그리던 여행을 휴가\n특가와 함께 계획하세요',
+                        style: TextStyle(fontSize: 12),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                width: 170,
+                height: 200,
+                margin: const EdgeInsets.only(top: 15, right: 15, bottom: 20),
+                decoration: BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.3),
+                      spreadRadius: 5,
+                      blurRadius: 10,
+                      offset: const Offset(0, 8),
+                    ),
+                  ],
+                  borderRadius: BorderRadius.circular(3),
+                ),
+                child: Stack(
+                  children: <Widget>[
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(3.0),
+                      child: Image.asset('image/tour_info.png',
+                          width: 170, height: 200, fit: BoxFit.fill),
+                    ),
+                    Container(
+                      padding: const EdgeInsets.only(top: 170, left: 13),
+                      child: const Text(
+                        '여행 / 관광 정보',
+                        style: TextStyle(
+                            fontSize: 15,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
           ),
         ],
       ),
